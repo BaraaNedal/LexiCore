@@ -15,7 +15,7 @@ public class SentimentAnalyzer {
     }
 
     private void initializeLexicon() {
-        positiveWords.add("ممتاز"); positiveWords.add("رائع"); positiveWords.add("جميل");
+        positiveWords.add("ممتاز"); positiveWords.add("فخم"); positiveWords.add("جميل");
         positiveWords.add("ناجح"); positiveWords.add("ذكي"); positiveWords.add("مفيد");
         positiveWords.add("good"); positiveWords.add("great"); positiveWords.add("excellent");
         positiveWords.add("happy"); positiveWords.add("awesome"); positiveWords.add("love");
