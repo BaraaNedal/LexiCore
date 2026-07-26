@@ -8,13 +8,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-/**
- * Local Analytics Dashboard.
- * <p>
- * Aggregates lightweight, on-device statistics about the loaded text:
- * total token count, unique (case-insensitive) vocabulary size, total
- * character count (excluding spaces), and a per-character frequency map.
- */
 public class AnalyticsDashboard {
 
     private int totalTokens;
@@ -27,15 +20,6 @@ public class AnalyticsDashboard {
         this.characterFrequency = new HashMap<>();
     }
 
-    /**
-     * Recomputes every statistic from scratch.
-     *
-     * @param sentences tokenized corpus (list of sentences, each a list of
-     *                  word tokens) — used for the token count and vocabulary
-     * @param rawText   the original loaded text — used for character-level
-     *                  statistics, since tokenizing/lowercasing would lose
-     *                  the exact character makeup of what the user typed
-     */
     public void computeStats(List<List<String>> sentences, String rawText) {
         reset();
 
@@ -69,7 +53,6 @@ public class AnalyticsDashboard {
         return totalCharactersExcludingSpaces;
     }
 
-    /** Unmodifiable view of the character -> frequency map. */
     public Map<Character, Integer> getCharacterFrequency() {
         return Collections.unmodifiableMap(characterFrequency);
     }
@@ -81,7 +64,6 @@ public class AnalyticsDashboard {
         characterFrequency.clear();
     }
 
-    /** Prints the consolidated dashboard view to the console. */
     public void display() {
         System.out.println("========== Analytics Dashboard ==========");
         System.out.println("Total tokens (words): " + totalTokens);
