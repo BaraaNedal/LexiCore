@@ -1,0 +1,34 @@
+warning: in the working copy of 'src/Main.java', LF will be replaced by CRLF the next time Git touches it
+[1mdiff --git a/src/Main.java b/src/Main.java[m
+[1mindex f940101..5604ae6 100644[m
+[1m--- a/src/Main.java[m
+[1m+++ b/src/Main.java[m
+[36m@@ -11,15 +11,6 @@[m [mimport lexicore_Pack.UndoRedoManager;[m
+ import java.util.List;[m
+ import java.util.Scanner;[m
+ [m
+[31m-/**[m
+[31m- * LexiCore: Mobile Text Processing Engine — console entry point.[m
+[31m- * <p>[m
+[31m- * Wires every feature together behind one continuous menu (Core[m
+[31m- * Requirement #3): text ingestion + pre-processing (TextEngine), the[m
+[31m- * analytics dashboard, positional search, atomic word replacement with[m
+[31m- * undo/redo, next-word prediction, keyword extraction, and sentiment[m
+[31m- * analysis.[m
+[31m- */[m
+ public class    Main {[m
+ [m
+     private static final Scanner scanner = new Scanner(System.in);[m
+[1mdiff --git a/src/lexicore_Pack/AnalyticsDashboard.java b/src/lexicore_Pack/AnalyticsDashboard.java[m
+[1mindex 20a3363..5a0c380 100644[m
+[1m--- a/src/lexicore_Pack/AnalyticsDashboard.java[m
+[1m+++ b/src/lexicore_Pack/AnalyticsDashboard.java[m
+[36m@@ -1,4 +1,8 @@[m
+ package lexicore_Pack;[m
+ [m
+[32m+[m[32mimport java.util.List;[m
+[32m+[m
+ public class AnalyticsDashboard {[m
+[32m+[m[32m    public void computeStats(List<List<String>> sentences, String rawText) {[m
+[32m+[m[32m    }[m
+ }[m

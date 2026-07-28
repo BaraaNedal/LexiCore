@@ -11,15 +11,6 @@ import lexicore_Pack.UndoRedoManager;
 import java.util.List;
 import java.util.Scanner;
 
-/**
- * LexiCore: Mobile Text Processing Engine — console entry point.
- * <p>
- * Wires every feature together behind one continuous menu (Core
- * Requirement #3): text ingestion + pre-processing (TextEngine), the
- * analytics dashboard, positional search, atomic word replacement with
- * undo/redo, next-word prediction, keyword extraction, and sentiment
- * analysis.
- */
 public class    Main {
 
     private static final Scanner scanner = new Scanner(System.in);
